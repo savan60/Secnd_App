@@ -22,9 +22,16 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter App'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Container(
-                  child: Column(
+        child: SingleChildScrollView(
+          child: Column(
             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
@@ -37,10 +44,15 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               UserTransaction(),
-              
             ],
           ),
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
     );
   }
 }
