@@ -17,6 +17,9 @@ class _AddTransactionsState extends State<AddTransactions> {
   DateTime _choosenDate;
 
   void submitcode() {
+    if(amountController.text.isEmpty){
+      return ;
+    }
     final enteredTitle = titleController.text;
     final enteredCounter = double.parse(amountController.text);
     final date=_choosenDate;
